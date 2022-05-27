@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import './createBlog.css'
 
 const URL = "http://localhost:8000/blogs"
 
