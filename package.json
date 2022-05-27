@@ -3,8 +3,29 @@
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "framer-motion": "6.3.4",
     "mysql2": "^2.3.3",
     "react-router-dom": "^6.3.0",
     "sequelize": "^6.20.0"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "rules": {
+      "jsx-quotes": [
+        2,
+        "single"
+      ],
+      "react/self-closing-comp": [
+        "error",
+        {
+          "component": true,
+          "html": false
+        }
+      ]
+    }
   }
 }
+
