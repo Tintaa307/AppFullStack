@@ -4,7 +4,7 @@ import BlogModel from "../models/BlogModels.js"
 export const getAllBlogs = async (req, res) => {
   try {
     const blogs = await BlogModel.findAll()
-    res.json(blogs)
+    res.json({ message: "Success!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
@@ -16,7 +16,7 @@ export const getOneBlog = async (req, res) => {
     const blog = await BlogModel.findAll({
       where: { id: req.params.id },
     })
-    res.json(blog)
+    res.json({ message: "Blog found!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
@@ -26,7 +26,7 @@ export const getOneBlog = async (req, res) => {
 export const createBlog = async (req, res) => {
   try {
     const blog = await BlogModel.create(req.body)
-    res.json(blog)
+    res.json({ message: "Blog created successfully!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
@@ -38,7 +38,7 @@ export const updateBlog = async (req, res) => {
     const blog = await BlogModel.update(req.body, {
       where: { id: req.params.id },
     })
-    res.json(blog)
+    res.json({ message: "Blog updated!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
@@ -50,7 +50,7 @@ export const deleteBlog = async (req, res) => {
     const blog = await BlogModel.destroy({
       where: { id: req.params.id },
     })
-    res.json(blog)
+    res.json({ message: "Blog deleted!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
