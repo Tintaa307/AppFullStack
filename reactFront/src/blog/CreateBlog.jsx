@@ -24,6 +24,7 @@ const CompShowBlog = () => {
 
   return (
     <div className="container">
+      <h1>App full Stack</h1>
       <div className="row">
         <div className="col">
           <table className="table">
