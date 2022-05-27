@@ -25,7 +25,7 @@ export const getOneBlog = async (req, res) => {
 // Create a new blog
 export const createBlog = async (req, res) => {
   try {
-    const blog = await BlogModel.create(req.body)
+    await BlogModel.create(req.body)
     res.json({ message: "Blog created successfully!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
@@ -35,7 +35,7 @@ export const createBlog = async (req, res) => {
 // Update a blog
 export const updateBlog = async (req, res) => {
   try {
-    const blog = await BlogModel.update(req.body, {
+    await BlogModel.update(req.body, {
       where: { id: req.params.id },
     })
     res.json({ message: "Blog updated!" })
@@ -47,7 +47,7 @@ export const updateBlog = async (req, res) => {
 // Delete a blog
 export const deleteBlog = async (req, res) => {
   try {
-    const blog = await BlogModel.destroy({
+    await BlogModel.destroy({
       where: { id: req.params.id },
     })
     res.json({ message: "Blog deleted!" })
