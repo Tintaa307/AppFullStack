@@ -6,8 +6,6 @@ import CompShowBlog from './blog/CreateBlog.jsx'
 function App() {
   return (
     <>
-      <Nav />
-      <Home />
       <CompShowBlog />
     </>
   )
