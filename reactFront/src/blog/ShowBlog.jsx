@@ -28,6 +28,7 @@ const CompShowBlog = () => {
       <h1>App full Stack</h1>
       <div className="row">
         <div className="col">
+          <Link to={"/create"} className="btn btn-primary mt-2 mb-2">Crear</Link>
           <table className="table">
             <thead>
               <tr>
