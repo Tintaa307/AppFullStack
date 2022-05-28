@@ -1,8 +1,9 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
-import './createBlog.css'
+import { Link } from "react-router-dom"
+import "./showBlog.css"
 
-const URL = "http://localhost:8000/blogs"
+const URL = "http://localhost:8000/blogs/"
 
 const CompShowBlog = () => {
   const [blogs, setBlogs] = useState([])
@@ -18,7 +19,7 @@ const CompShowBlog = () => {
 
   // procedimiento para el
   const deleteBlog = async (id) => {
-    await axios.delete(`${URL}/${id}`)
+    axios.delete(`${URL}/${id}`)
     getBlogs()
   }
 
@@ -41,9 +42,6 @@ const CompShowBlog = () => {
                   <td>{blog.title}</td>
                   <td>{blog.content}</td>
                   <td>
-                    <link to={`/edit/${blog.id}`} className="btn btn-info">
-                      Editar
-                    </link>
                     <button
                       className="btn btn-danger"
                       onClick={() => deleteBlog(blog.id)}
