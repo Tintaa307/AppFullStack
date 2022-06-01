@@ -28,7 +28,7 @@ const CompShowBlog = () => {
       <h1>App full Stack</h1>
       <div className="row">
         <div className="col">
-          <Link to={"/create"} className="btn btn-primary mt-2 mb-4">Crear</Link>
+          <Link to={"/create"} className="btn btn-primary mt-2 mb-4"><i class="ri-add-fill"></i></Link>
           <table className="table">
             <thead className="table-primary">
               <tr>
@@ -37,7 +37,7 @@ const CompShowBlog = () => {
                 <th>Accions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="tbody">
               {
                 blogs.map((blog) => (
                   <tr key={blog.id}>

@@ -1,3 +1,9 @@
+.container {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 4rem;
+}
+
 .container h1 {
     text-align: center;
     color: #000;
@@ -24,4 +30,12 @@
 
 .container .col .table tr th {
     text-align: center;
+}
+
+.container .col .table tbody button {
+    margin-left: 10px;
+}
+
+.container .col .btn.btn-primary {
+    width: 60px;
 }
