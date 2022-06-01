@@ -19,7 +19,7 @@ const CompShowBlog = () => {
 
   // procedimiento para borrar los blogs
   const deleteBlog = async (id) => {
-    axios.delete(`${URL}/${id}`)
+    axios.delete(`${URI}${id}`)
     getBlogs()
   }
 
@@ -44,7 +44,7 @@ const CompShowBlog = () => {
                     <td>{blog.title}</td>
                     <td>{blog.content}</td>
                     <td>
-                      <Link to={`/edit/${blog.id}`} className="btn btn-warning">Edit</Link>
+                      <Link to={`/edit/${blog.id}`} className="btn btn-info">Edit</Link>
                       <button
                         className="btn btn-danger"
                         onClick={() => deleteBlog(blog.id)}
