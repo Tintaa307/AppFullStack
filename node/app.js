@@ -18,7 +18,7 @@ app.use(express.json())
 app.use("/blogs", blogRoutes)
 
 try {
-  await bd.autenticate()
+  await bd.authenticate()
   console.log("Conexion exitosa")
 } catch (error) {
   console.log("Error al conectar: " + error)
