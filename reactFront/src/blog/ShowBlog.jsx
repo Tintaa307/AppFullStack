@@ -30,7 +30,7 @@ const CompShowBlog = () => {
         <div className="col">
           <Link to={"/create"} className="btn btn-primary mt-2 mb-4">Crear</Link>
           <table className="table">
-            <thead>
+            <thead className="table-primary">
               <tr>
                 <th>Title</th>
                 <th>Content</th>
