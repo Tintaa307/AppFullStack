@@ -3,7 +3,7 @@ import BlogModel from "../models/BlogModels.js"
 // Show all blogs
 export const getAllBlogs = async (req, res) => {
   try {
-    const blogs = await BlogModel.findAll()
+    await BlogModel.findAll()
     res.json({ message: "Success!" })
   } catch (error) {
     res.status(500).json({ message: error.message })
@@ -13,7 +13,7 @@ export const getAllBlogs = async (req, res) => {
 // Show one blog
 export const getOneBlog = async (req, res) => {
   try {
-    const blog = await BlogModel.findAll({
+    await BlogModel.findAll({
       where: { id: req.params.id },
     })
     res.json({ message: "Blog found!" })
