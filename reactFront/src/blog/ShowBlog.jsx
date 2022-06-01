@@ -17,7 +17,7 @@ const CompShowBlog = () => {
     setBlogs(res.data)
   }
 
-  // procedimiento para el
+  // procedimiento para borrar los blogs
   const deleteBlog = async (id) => {
     axios.delete(`${URL}/${id}`)
     getBlogs()
@@ -38,21 +38,23 @@ const CompShowBlog = () => {
               </tr>
             </thead>
             <tbody>
-              {blogs.map((blog) => (
-                <tr key={blog.id}>
-                  <td>{blog.title}</td>
-                  <td>{blog.content}</td>
-                  <td>
-                    <Link to={`/edit/${blog.id}`} className="btn btn-warning">Edit</Link>
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => deleteBlog(blog.id)}
-                    >
-                      Eliminar
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {
+                blogs.map((blog) => (
+                  <tr key={blog.id}>
+                    <td>{blog.title}</td>
+                    <td>{blog.content}</td>
+                    <td>
+                      <Link to={`/edit/${blog.id}`} className="btn btn-warning">Edit</Link>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => deleteBlog(blog.id)}
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>
