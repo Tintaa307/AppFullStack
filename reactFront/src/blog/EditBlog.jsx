@@ -8,15 +8,15 @@ const CompEditBlog = () => {
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const navigate = useNavigate()
-    const id = useParams()
+    const { id } = useParams()
 
 
     // procedimiento para guardar
     const update = async (e) => {
         e.preventDefault()
         await axios.put(URI + id, {
-            title,
-            content
+            title: title,
+            content: content
         })
         navigate("/")
     }
@@ -27,8 +27,8 @@ const CompEditBlog = () => {
 
     const getBlogById = async () => {
         const res = await axios.get(URI + id)
-        setTitle(res.data.data.title)
-        setContent(res.data.data.content)
+        setTitle(res.data.title)
+        setContent(res.data.content)
     }
     
     return (

@@ -28,7 +28,7 @@ const CompShowBlog = () => {
       <h1>App full Stack</h1>
       <div className="row">
         <div className="col">
-          <Link to={"/create"} className="btn btn-primary mt-2 mb-4"><i class="ri-add-fill"></i></Link>
+        <Link to={"/create"} className="btn btn-primary">Create<i class="ri-add-fill"></i></Link>
           <table className="table">
             <thead className="table-primary">
               <tr>
@@ -44,9 +44,9 @@ const CompShowBlog = () => {
                     <td>{blog.title}</td>
                     <td>{blog.content}</td>
                     <td>
-                      <Link to={`/edit/${blog.id}`} className="btn btn-info"><i class="ri-edit-box-line"></i></Link>
+                      <Link to={`/edit/${blog.id}`} className="link"><i class="ri-edit-box-line"></i></Link>
                       <button
-                        className="btn btn-danger"
+                        className="btn-delete"
                         onClick={() => deleteBlog(blog.id)}
                       >
                         <i class="ri-delete-bin-line"></i>

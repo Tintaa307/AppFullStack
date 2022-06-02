@@ -17,10 +17,11 @@
 }
 
 .container .col .table {
-    width: 70%;
+    width: 80%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-weight: bold;
 }
 
 .container .col .table tr {
@@ -29,13 +30,63 @@
 }
 
 .container .col .table tr th {
+    border: 2px solid #fff;
     text-align: center;
+    width: 150px;
+}
+
+.container .col .table tr td {
+    text-align: center;
+    width: 150px;
 }
 
 .container .col .table tbody button {
-    margin-left: 10px;
+    margin: 10px;
 }
 
 .container .col .btn.btn-primary {
-    width: 60px;
+    width: 120px;
+    height: 47px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.container .col .btn.btn-primary i {
+    margin-left: 5px;
+    position: relative;
+    top: 4px;
+    font-size: 1.2rem;
+}
+
+.container .col .table .tbody .link {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 12px;
+    background-color: #304480;
+    margin: 10px;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid #304480;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.container .col .table .tbody .link i {
+    color: #fff;
+}
+
+.container .col .table .tbody button {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 }
