@@ -41,7 +41,7 @@ const CompCreateBlog = () => {
                         onChange={(e) => setContent(e.target.value)}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Save</button>
+                <button type="submit" className="btn btn-primary">Create</button>
             </form>
         </div>
     )

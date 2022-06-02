@@ -49,7 +49,7 @@ const CompShowBlog = () => {
                         className="btn btn-danger"
                         onClick={() => deleteBlog(blog.id)}
                       >
-                        Eliminar
+                        <i class="ri-delete-bin-line"></i>
                       </button>
                     </td>
                   </tr>

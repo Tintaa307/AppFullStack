@@ -14,7 +14,7 @@ const CompEditBlog = () => {
     // procedimiento para guardar
     const update = async (e) => {
         e.preventDefault()
-        await axios.put(`${URI}${id}`, {
+        await axios.put(URI + id, {
             title,
             content
         })
@@ -26,7 +26,7 @@ const CompEditBlog = () => {
     }, [])
 
     const getBlogById = async () => {
-        const res = await axios.get(`${URI}${id}`)
+        const res = await axios.get(URI + id)
         setTitle(res.data.data.title)
         setContent(res.data.data.content)
     }
