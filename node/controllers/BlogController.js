@@ -28,7 +28,7 @@ export const createBlog = async (req, res) => {
     await BlogModel.create(req.body)
     res.json({ message: "Blog created successfully!" })
   } catch (error) {
-    res.status(500).json({ message: error.message })
+    res.status(404).json({ message: error.message })
   }
 }
 
@@ -40,7 +40,7 @@ export const updateBlog = async (req, res) => {
     })
     res.json({ message: "Blog updated!" })
   } catch (error) {
-    res.status(500).json({ message: error.message })
+    res.status(404).json({ message: error.message })
   }
 }
 
@@ -52,6 +52,6 @@ export const deleteBlog = async (req, res) => {
     })
     res.json({ message: "Blog deleted!" })
   } catch (error) {
-    res.status(500).json({ message: error.message })
+    res.status(404).json({ message: error.message })
   }
 }
